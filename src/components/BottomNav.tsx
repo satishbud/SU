@@ -2,7 +2,7 @@ import React from "react";
 
 function BottomNav() {
   return (
-    <>
+    <div className="bottom-nav">
       <div className="left">
         <ul>
           <li>
@@ -30,7 +30,7 @@ function BottomNav() {
           <a href="#">Login/Register</a>
         </span>
       </div>
-    </>
+    </div>
   );
 }
 
