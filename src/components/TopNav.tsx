@@ -3,11 +3,18 @@ import React from "react";
 function TopNav() {
   return (
     <>
-      <nav className="Top-nav">
-        <h1 className="logo">&lt;SU /&gt;</h1>
-        <form action="#" className="check" id="lookup">
-          <input type="text" id="search" placeholder="LookUP Item" />
-          <input type="button" value="Search" />
+      <nav className="top-nav">
+        <a href="./" className="logo">
+          &lt;SU /&gt;
+        </a>
+        <form action="#" className="lookup" id="lookup">
+          <input
+            type="text"
+            className="search"
+            id="search"
+            placeholder="LookUp Item"
+          />
+          <input className="lookup-button" type="button" value="Search" />
         </form>
       </nav>
     </>

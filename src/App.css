@@ -1,0 +1,105 @@
+/** Top Nav **/
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-background-color);
+  margin: 1.4rem;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#lookup {
+  /* font-size: 1.05rem; */
+}
+.lookup {
+  font-size: 1.05em;
+  --text-padding: 0.4rem;
+
+  font-family: var(--primary-font);
+}
+
+.lookup .search {
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 1rem 0 0 1rem;
+  outline: none;
+  padding: var(--text-padding) 4rem var(--text-padding) 1rem;
+
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.lookup .lookup-button {
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 0 1rem 1rem 0;
+
+  background-color: var(--primary-color);
+  outline: none;
+  padding: var(--text-padding) 0.5rem;
+
+  font-size: inherit;
+  font-weight: 100;
+  font-family: inherit;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lookup .lookup-button:hover {
+  animation: link-on-hover 0.2s;
+  animation-fill-mode: forwards;
+}
+
+/** Bottom Nav **/
+.bottom-nav {
+  padding: 1rem 1.4rem;
+  display: grid;
+  grid-auto-flow: column;
+  background-color: var(--primary-color);
+
+  color: var(--primary-text-color);
+}
+
+.bottom-nav a:hover {
+  animation: link-on-hover 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.bottom-nav .left ul {
+  display: flex;
+}
+
+.left ul li {
+  padding: 0 0.7rem;
+}
+
+.left ul li:first-child {
+  padding-left: 0;
+}
+
+.left ul li:last-child {
+  padding-right: 0;
+}
+
+.left ul li a {
+  color: inherit;
+}
+
+.bottom-nav .right {
+  justify-self: end;
+}
+.bottom-nav .right a {
+  color: inherit;
+}
+
+@keyframes link-on-hover {
+  0% {
+    color: inherit;
+  }
+  100% {
+    color: var(--secondary-text-color);
+  }
+}
