@@ -1,0 +1,29 @@
+.product {
+  width: 300px;
+}
+
+.product .product-banner {
+  width: 100%;
+  height: auto;
+}
+
+.product .product-banner img {
+  width: 100%;
+}
+.product .product-details {
+  display: flex;
+  /*background-color: var(--primary-color);*/
+  justify-content: space-around;
+  margin: 1.4rem;
+  padding: 1.3rem;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+.product-details .details-left,
+.details-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+.hero-container .hero-cover {
+  display: flex;
+  background-color: var(--primary-color);
+  margin: 1.7rem;
+}
+.hero-container .hero-cover img {
+  max-width: 101%;
+  width: 95em;
+  height: 15em;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
