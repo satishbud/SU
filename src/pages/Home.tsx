@@ -1,7 +1,14 @@
 import React from "react";
+import HeroContainer from "../components/HeroContainer";
+import Product from "../components/Product";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <HeroContainer />
+      <Product />
+    </>
+  );
 }
 
 export default Home;
