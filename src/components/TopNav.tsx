@@ -3,7 +3,7 @@ import React from "react";
 function TopNav() {
   return (
     <>
-      <nav className="top-nav">
+      <nav id="top-nav" className="top-nav">
         <a href="./" className="logo">
           &lt;SU /&gt;
         </a>

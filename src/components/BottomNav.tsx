@@ -9,19 +9,16 @@ function BottomNav() {
             <a href="#">Tech</a>
           </li>
           <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
             <a href="#">Grocery</a>
           </li>
           <li>
-            <a href="#">Offers</a>
+            <a href="./offers">Offers</a>
           </li>
           <li>
             <a href="#">Collection</a>
           </li>
           <li>
-            <a href="#">About us </a>
+            <a href="./about-us">About us </a>
           </li>
         </ul>
       </div>
