@@ -1,4 +1,4 @@
-.hero-container {
+.main-container {
   padding: 1rem 1.4rem;
 }
 
@@ -100,9 +100,6 @@
 }
 
 /* Hero Section */
-.hero-container {
-  height: 100vh;
-}
 
 .bottom-nav {
   position: sticky;
