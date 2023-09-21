@@ -1,13 +1,25 @@
 import React from "react";
+import "../styles/Product.css";
+import Button from "./Button";
+import { SuccessMessage } from "./ProductContainer";
 
 interface ProductDetails {
   name: string;
   id: string;
   price: number;
   imageSrc: string;
+  onBuy: (id: string) => void;
+  onAddToCart: (id: string) => void;
 }
 
-const Product = ({ name, id, price, imageSrc }: ProductDetails) => {
+const Product = ({
+  name,
+  id,
+  price,
+  imageSrc,
+  onBuy,
+  onAddToCart,
+}: ProductDetails) => {
   return (
     <div key={id} className="product">
       <div className="product-banner">
@@ -16,11 +28,11 @@ const Product = ({ name, id, price, imageSrc }: ProductDetails) => {
       <div className="product-details">
         <div className="details-left">
           <span>{name}</span>
-          <span>BUY</span>
+          <Button onButtonClick={() => onBuy(id)}>Buy</Button>
         </div>
         <div className="details-right">
           <span>${price}</span>
-          <span>Add to Cart.</span>
+          <Button onButtonClick={() => onAddToCart(id)}>Add to Cart.</Button>
         </div>
       </div>
     </div>
