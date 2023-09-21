@@ -1,3 +1,7 @@
+.hero-container {
+  padding: 1rem 1.4rem;
+}
+
 /** Top Nav **/
 .top-nav {
   display: flex;
@@ -93,6 +97,16 @@
 }
 .bottom-nav .right a {
   color: inherit;
+}
+
+/* Hero Section */
+.hero-container {
+  height: 100vh;
+}
+
+.bottom-nav {
+  position: sticky;
+  top: 0;
 }
 
 @keyframes link-on-hover {
