@@ -1,7 +1,9 @@
 import React from "react";
 
-function Offers() {
-  return <div>Offers</div>;
-}
+interface IOffers {}
+
+const Offers = ({}: IOffers) => {
+  return <div>HI</div>;
+};
 
 export default Offers;
