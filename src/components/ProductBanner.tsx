@@ -6,7 +6,6 @@ interface IProductBanner {
 }
 
 const ProductBanner = ({ product }: IProductBanner) => {
-  console.log("Rendering");
   return (
     <div className="product-banner">
       {/* <Image src={product.getImageSource()} alt={product.getName()}></Image> */}
