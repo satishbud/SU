@@ -51,9 +51,15 @@ export interface ICart extends ICartViewer {
   addToCart(item: ICartItem): void;
 
   /**
-   * Removes all items from the cart that match the item given
+   * Removes all items from the cart that match the id of the item passed in
    * @param item item to be removed
    * @returns the removed item
+   */
+  removeItemFromCart(item: ICartItem): ICartItem | null;
+
+  /**
+   * Removes one items from the cart that matches the item passed in (doesnot remove multiple item with same ID)
+   * @param item item to be removed
    */
   removeFromCart(item: ICartItem): ICartItem | null;
 }
@@ -87,12 +93,17 @@ export default class Cart implements ICart {
     return this.items.find((i) => i.getId() === item.getId()) ? true : false;
   }
 
-  public removeFromCart(item: ICartItem): ICartItem | null {
+  public removeItemFromCart(item: ICartItem): ICartItem | null {
     if (!this.isInCart(item)) return null;
     this.items = this.items.filter((i) => i.getId() !== item.getId());
     return item;
   }
 
+  public removeFromCart(item: ICartItem): ICartItem | null {
+    const index = this.items.findIndex((i) => i.getId() === item.getId());
+    if (index < 0) return null;
+    return this.items.splice(index, 1).pop() || null;
+  }
   public addToCart(item: ICartItem): void {
     this.items.push(item);
   }

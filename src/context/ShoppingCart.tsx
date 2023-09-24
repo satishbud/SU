@@ -3,6 +3,8 @@ import Cart, { ICart, ICartItem } from "../classes/Cart";
 
 interface IShoppingCartContext {
   addToCart: (item: ICartItem) => void;
+  removeFromCart: (item: ICartItem) => void;
+  removeItemFromCart: (item: ICartItem) => void;
   cart: ICart;
 }
 
@@ -28,8 +30,29 @@ export const ShoppingCartProvider = ({ children }: IShoppingCartProvider) => {
     });
   };
 
+  const removeItemFromCart = (item: ICartItem) => {
+    cartDetails.cart.removeItemFromCart(item);
+    updateCart({
+      cart: cartDetails.cart,
+    });
+  };
+
+  const removeFromCart = (item: ICartItem) => {
+    cartDetails.cart.removeFromCart(item);
+    updateCart({
+      cart: cartDetails.cart,
+    });
+  };
+
   return (
-    <ShoppingCartContext.Provider value={{ addToCart, cart: cartDetails.cart }}>
+    <ShoppingCartContext.Provider
+      value={{
+        addToCart,
+        removeFromCart,
+        removeItemFromCart,
+        cart: cartDetails.cart,
+      }}
+    >
       {children}
     </ShoppingCartContext.Provider>
   );
