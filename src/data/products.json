@@ -1,6 +1,6 @@
 [
   {
-    "id": "100004",
+    "id": "100001",
     "name": "Dunkin Donuts",
     "priceDetails": {
       "price": 6.99,
@@ -12,32 +12,32 @@
     "imgSrc": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "id": "100001",
+    "id": "100002",
     "name": "Fuji Flame",
     "priceDetails": {
-      "price": 200,
+      "price": 500,
       "isOnSale": false
     },
     "imgSrc": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "id": "100002",
-    "name": "Dunkin Donuts",
+    "id": "100003",
+    "name": "Table",
     "priceDetails": {
-      "price": 6.99,
+      "price": 150,
       "isOnSale": false
     },
-    "imgSrc": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "imgSrc": "https://images.pexels.com/photos/5710689/pexels-photo-5710689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "id": "100003",
-    "name": "Fuji Flame",
-    "imgSrc": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": "100004",
+    "name": "MacBook",
+    "imgSrc": "https://images.pexels.com/photos/16136419/pexels-photo-16136419/free-photo-of-a-laptop-on-a-desk.jpeg?auto=compress&cs=tinysrgb&w=600",
     "priceDetails": {
-      "price": 200,
+      "price": 2000,
       "isOnSale": true,
       "sale": {
-        "price": 175
+        "price": 1900
       }
     }
   }
