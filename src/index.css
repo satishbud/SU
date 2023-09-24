@@ -18,3 +18,19 @@ a {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+.generic-button {
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(202, 90%, 40%);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generic-button:hover {
+  background-color: hsl(202, 100%, 50%);
+}

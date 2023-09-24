@@ -34,9 +34,10 @@
 }
 .product .product-details {
   display: flex;
+  flex-direction: column;
   min-height: 3rem;
   justify-content: space-between;
-  padding: 1.3rem;
+  padding: 1rem;
   background-color: var(--details-background-color);
 }
 
@@ -50,6 +51,7 @@
   flex-direction: row;
   align-items: center;
   font-weight: bold;
+  margin-top: 0.1rem;
 }
 .product-price .original-price.strikethrough {
   text-decoration: line-through;
@@ -74,11 +76,14 @@
 
 .details-right {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.3rem;
   font-size: 1.2rem;
   text-align: center;
   font-weight: 600;
+  margin-top: 0.3rem;
 }
 
 .details-right .button {
@@ -87,7 +92,28 @@
   padding: 0.3rem;
   cursor: pointer;
   user-select: none;
-  transform: skewX(-10deg);
+  width: fit-content;
+  flex-grow: 1;
+}
+
+.details-right .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+}
+
+.details-right .remove-button {
+  padding: 0.7rem 0.5rem;
+  font-size: 1.3rem;
+  background-color: hsl(3, 90%, 40%);
+  flex-grow: 0.5;
+  color: var(--secondary-text-color);
+}
+.details-right .remove-button:hover {
+  background-color: hsl(3, 100%, 50%);
 }
 
 /* Smaller devices */
