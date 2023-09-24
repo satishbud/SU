@@ -1,34 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function BottomNav() {
+const BottomNav = () => {
   return (
     <div className="bottom-nav">
       <div className="left">
         <ul>
           <li>
-            <a href="#">Tech</a>
+            <Link to={"./tech"}>Tech</Link>
           </li>
           <li>
-            <a href="#">Grocery</a>
+            <Link to={"./grocery"}>Grocery</Link>
           </li>
           <li>
-            <a href="./offers">Offers</a>
+            <Link to={"./offers"}>Offers</Link>
           </li>
           <li>
-            <a href="#">Collection</a>
+            <Link to={"./collection"}>Collection</Link>
           </li>
           <li>
-            <a href="./about-us">About us </a>
+            <Link to={"./about-us"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"./cart"}>Cart</Link>
           </li>
         </ul>
       </div>
       <div className="right">
         <span>
-          <a href="#">Login/Register</a>
+          <Link to={"./login-register"}>Login/Register</Link>
         </span>
       </div>
     </div>
   );
-}
+};
 
 export default BottomNav;

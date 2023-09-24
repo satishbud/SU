@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function TopNav() {
+const TopNav = () => {
   return (
     <>
       <nav id="top-nav" className="top-nav">
-        <a href="./" className="logo">
+        <Link className="logo" to={"/"}>
           &lt;SU /&gt;
-        </a>
+        </Link>
         <form action="#" className="lookup" id="lookup">
           <input
             type="text"
@@ -19,6 +20,6 @@ function TopNav() {
       </nav>
     </>
   );
-}
+};
 
 export default TopNav;
