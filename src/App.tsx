@@ -1,24 +1,30 @@
-import "./App.css";
+import React, { Component, ReactNode } from "react";
 import NavBar from "./components/NavBar";
-
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Offers from "./pages/Offers";
+import Cart from "./pages/Cart";
 
-function App() {
+import { default as CartComponent } from "./components/Cart";
+
+import "./App.css";
+
+const App = () => {
   return (
     <>
       <NavBar />
       <main className="main-container">
+        <CartComponent />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/offers" element={<Offers />} />
+          <Route path="/" Component={() => <Home />} />
+          <Route path="/about-us" Component={() => <AboutUs />} />
+          <Route path="/offers" Component={() => <Offers />} />
+          <Route path="cart" Component={() => <Cart />} />
         </Routes>
       </main>
     </>
   );
-}
+};
 
 export default App;

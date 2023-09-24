@@ -1,0 +1,44 @@
+[
+  {
+    "id": "100004",
+    "name": "Dunkin Donuts",
+    "priceDetails": {
+      "price": 6.99,
+      "isOnSale": true,
+      "sale": {
+        "price": 5.99
+      }
+    },
+    "imgSrc": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "100001",
+    "name": "Fuji Flame",
+    "priceDetails": {
+      "price": 200,
+      "isOnSale": false
+    },
+    "imgSrc": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "100002",
+    "name": "Dunkin Donuts",
+    "priceDetails": {
+      "price": 6.99,
+      "isOnSale": false
+    },
+    "imgSrc": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "100003",
+    "name": "Fuji Flame",
+    "imgSrc": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "priceDetails": {
+      "price": 200,
+      "isOnSale": true,
+      "sale": {
+        "price": 175
+      }
+    }
+  }
+]
