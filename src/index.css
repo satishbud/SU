@@ -19,13 +19,22 @@ a {
   color: var(--primary-text-color);
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
+button:focus {
+  outline: 0.15rem solid black;
+}
+
 .generic-button {
   cursor: pointer;
   user-select: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: hsl(202, 90%, 40%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
