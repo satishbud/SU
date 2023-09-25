@@ -86,23 +86,21 @@
   margin-top: 0.3rem;
 }
 
-.details-right .button {
-  border: 2px solid black;
-  border-radius: 0.3rem;
-  padding: 0.3rem;
-  cursor: pointer;
-  user-select: none;
-  width: fit-content;
-  flex-grow: 1;
+.details-right .add-to-cart-button,
+.details-right .buy-button {
+  font-size: 1.5rem;
 }
 
 .details-right .quantity {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  all: unset;
   width: 1.8rem;
   height: 1.8rem;
   text-align: center;
+  font-weight: bold;
+}
+
+.details-right .quantities-button {
+  font-size: 2rem;
 }
 
 .details-right .remove-button {
