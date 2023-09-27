@@ -1,5 +1,5 @@
 import React from "react";
-import { IProduct } from "../classes/Product";
+import { default as ProductOBJ, IProduct } from "../classes/Product";
 import ProductBanner from "./ProductBanner";
 import ProductDetails from "./ProductDetails";
 

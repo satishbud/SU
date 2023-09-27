@@ -1,11 +1,22 @@
 import { ReactNode, useContext, createContext, useState } from "react";
-import Cart, { ICart, ICartItem } from "../classes/Cart";
+import Cart, { ICartItem, ICartViewer } from "../classes/Cart";
 
 interface IShoppingCartContext {
-  addToCart: (item: ICartItem) => void;
-  removeFromCart: (item: ICartItem) => void;
-  removeItemFromCart: (item: ICartItem) => void;
-  cart: ICart;
+  cart: ICartViewer;
+  updateCart: (args: IUpdateCartDetails) => void;
+}
+
+export enum CART_ACTIONS {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  REMOVE_ITEM_FROM_CART,
+}
+
+interface IUpdateCartDetails {
+  type: CART_ACTIONS;
+  payload: {
+    item: ICartItem;
+  };
 }
 
 export const ShoppingCartContext = createContext({} as IShoppingCartContext);
@@ -19,38 +30,37 @@ interface IShoppingCartProvider {
 }
 
 export const ShoppingCartProvider = ({ children }: IShoppingCartProvider) => {
-  const [cartDetails, updateCart] = useState({
+  const [cartDetails, updateCartState] = useState({
     cart: Cart.getCart(),
   });
 
-  const addToCart = (item: ICartItem) => {
-    cartDetails.cart.addToCart(item);
-    updateCart({
-      cart: cartDetails.cart,
-    });
-  };
+  const updateCart = ({ type, payload }: IUpdateCartDetails) => {
+    const { item } = payload;
+    switch (type) {
+      case CART_ACTIONS.ADD_TO_CART:
+        cartDetails.cart.addToCart(item);
+        break;
+      case CART_ACTIONS.REMOVE_FROM_CART:
+        cartDetails.cart.removeFromCart(item);
 
-  const removeItemFromCart = (item: ICartItem) => {
-    cartDetails.cart.removeItemFromCart(item);
-    updateCart({
-      cart: cartDetails.cart,
-    });
-  };
+        break;
+      case CART_ACTIONS.REMOVE_ITEM_FROM_CART:
+        cartDetails.cart.removeItemFromCart(item);
 
-  const removeFromCart = (item: ICartItem) => {
-    cartDetails.cart.removeFromCart(item);
-    updateCart({
-      cart: cartDetails.cart,
+        break;
+      default:
+        break;
+    }
+    updateCartState(() => {
+      return { ...cartDetails };
     });
   };
 
   return (
     <ShoppingCartContext.Provider
       value={{
-        addToCart,
-        removeFromCart,
-        removeItemFromCart,
         cart: cartDetails.cart,
+        updateCart,
       }}
     >
       {children}
