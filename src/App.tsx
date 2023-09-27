@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import { default as CartComponent } from "./components/Cart";
 
 import "./App.css";
+import Categories from "./pages/Categories";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" Component={() => <Home />} />
           <Route path="/about-us" Component={() => <AboutUs />} />
           <Route path="/offers" Component={() => <Offers />} />
+          <Route path="/categories" Component={() => <Categories />} />
           <Route path="cart" Component={() => <Cart />} />
         </Routes>
       </main>

@@ -16,7 +16,7 @@ const BottomNav = () => {
             <Link to={"./offers"}>Offers</Link>
           </li>
           <li>
-            <Link to={"./collection"}>Collection</Link>
+            <Link to={"./categories"}>Categories</Link>
           </li>
           <li>
             <Link to={"./about-us"}>About Us</Link>
