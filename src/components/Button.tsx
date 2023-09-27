@@ -16,7 +16,7 @@ const Button = ({
   return (
     <button
       onKeyDown={(event) => {
-        event.key === "Enter" && onEnterWhenTabbed && onEnterWhenTabbed(event);
+        // event.key === "Enter" && onEnterWhenTabbed && onEnterWhenTabbed(event);
       }}
       {...otherProps}
     >

@@ -48,7 +48,7 @@ export interface ICart extends ICartViewer {
    * Adds an item to the cart
    * @param item the item to be added
    */
-  addToCart(item: ICartItem): void;
+  addToCart(item: ICartItem | null): void;
 
   /**
    * Removes all items from the cart that match the id of the item passed in
@@ -61,7 +61,7 @@ export interface ICart extends ICartViewer {
    * Removes one items from the cart that matches the item passed in (doesnot remove multiple item with same ID)
    * @param item item to be removed
    */
-  removeFromCart(item: ICartItem): ICartItem | null;
+  removeFromCart(item: ICartItem | null): ICartItem | null;
 }
 
 export default class Cart implements ICart {
