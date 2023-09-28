@@ -4,6 +4,7 @@ import "./index.css";
 import { default as App } from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ShoppingCartProvider } from "./context/ShoppingCart";
+import { LocalizationProvider } from "./context/LocalizationContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,9 +12,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ShoppingCartProvider>
-        <App />
-      </ShoppingCartProvider>
+      <LocalizationProvider>
+        <ShoppingCartProvider>
+          <App />
+        </ShoppingCartProvider>
+      </LocalizationProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
