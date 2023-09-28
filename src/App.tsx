@@ -10,8 +10,12 @@ import { default as CartComponent } from "./components/Cart";
 
 import "./App.css";
 import Categories from "./pages/Categories";
+import Localization from "./localization/Localization";
 
 const App = () => {
+  const local = Localization.getText("WEB_NAME");
+  console.log(local);
+
   return (
     <>
       <NavBar />
