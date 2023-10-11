@@ -16,9 +16,6 @@
   font-weight: bold;
 }
 
-#lookup {
-  /* font-size: 1.05rem; */
-}
 .lookup {
   font-size: 1.05em;
   --text-padding: 0.4rem;
@@ -111,5 +108,27 @@
   }
   100% {
     color: var(--secondary-text-color);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .top-nav {
+    overflow-x: hidden;
+  }
+  .bottom-nav {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .main-container {
+    width: auto;
+    margin: 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .main-container {
+    margin: 0;
   }
 }
