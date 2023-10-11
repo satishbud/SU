@@ -14,7 +14,6 @@ import Localization from "./localization/Localization";
 
 const App = () => {
   const local = Localization.getText("WEB_NAME");
-  console.log(local);
 
   return (
     <>
