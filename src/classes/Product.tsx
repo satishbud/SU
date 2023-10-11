@@ -10,7 +10,7 @@ export interface IProductDetails {
   name: string;
   imgSrc: string;
   priceDetails: IPriceDetails;
-  category?: string[];
+  categories?: ICategory[];
 }
 
 export interface IProduct {
@@ -28,28 +28,13 @@ export default class Product implements IProduct, ICartItem {
   private price: IPrice;
   private categories: ICategory[];
 
-  constructor({ id, name, imgSrc, priceDetails, category }: IProductDetails) {
+  constructor({ id, name, imgSrc, priceDetails, categories }: IProductDetails) {
     this.id = id;
     this.name = name;
     this.imageSource = imgSrc;
     this.price = new Price(priceDetails);
 
-    this.categories = [];
-    category?.forEach((categoryID) => {
-      const category = CategoryFactory.getCategory(categoryID);
-      if (category) {
-        this.categories.push(category);
-      }
-    });
-
-    if (this.price.isOnSale()) {
-      const onSaleCategory = CategoryFactory.getCategory(
-        CategoryFactory.ONSALEID
-      );
-      if (onSaleCategory) {
-        this.categories.push(onSaleCategory);
-      }
-    }
+    this.categories = categories || [];
   }
 
   public getPriceDetails(): IPrice {

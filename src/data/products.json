@@ -10,17 +10,17 @@
       }
     },
     "imgSrc": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "category": ["300001"]
+    "categories": ["300001"]
   },
   {
     "id": "100002",
-    "name": "Fuji Flame",
+    "name": "Fuji Flame Fuji Flame Fuji Flame Fuji Flame",
     "priceDetails": {
       "price": 500,
       "isOnSale": false
     },
     "imgSrc": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "category": ["300002"]
+    "categories": ["300002"]
   },
   {
     "id": "100003",
@@ -30,7 +30,7 @@
       "isOnSale": false
     },
     "imgSrc": "https://images.pexels.com/photos/5710689/pexels-photo-5710689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "category": ["300003"]
+    "categories": ["300003"]
   },
   {
     "id": "100004",
@@ -43,6 +43,6 @@
         "price": 1900
       }
     },
-    "category": ["300002"]
+    "categories": ["300002"]
   }
 ]
