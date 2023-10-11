@@ -1,0 +1,30 @@
+.category-title {
+  position: relative;
+}
+
+.toogle-hide {
+  font-size: 2rem;
+  display: inline-block;
+  position: absolute;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.toogle-hide.minimized {
+  transform: rotate(-90deg);
+}
+
+.toogle-hide.maximized {
+  transform: rotate(90deg);
+}
+
+.category-container {
+  transition: all 0.5s forwards;
+}
+
+.category-container.minimized {
+  height: 0;
+}
+.category-container.maximized {
+  height: auto;
+}

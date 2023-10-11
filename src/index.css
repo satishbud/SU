@@ -33,13 +33,16 @@ button:focus {
   user-select: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: hsl(202, 90%, 40%);
+  background-color: hsl(0, 0%, 60%);
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  transition: color 0.6ms;
 }
 
 .generic-button:hover {
-  background-color: hsl(202, 100%, 50%);
+  background-color: hsl(0, 0%, 75%);
+  color: black;
 }
